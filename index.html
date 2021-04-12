@@ -1,16 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Printer Panda</title>
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/main.css">
 </head>
+
 <body>
     <header>
         <div class="nav-wrapper">
@@ -28,14 +30,56 @@
                     <span class="material-icons icon-search">search</span>
                     <span class="material-icons icon-person">person</span>
                     <span class="material-icons icon-cart">shopping_cart</span>
-                </div>   
+                </div>
             </div>
-        </div>        
+        </div>
     </header>
-    <input type="text" search= "search">
+    <input class="search-mobile" placeholder="Search" type="text" name="search">
     <main class="container">
-        <h1>Shirts</h1>
-        <aside></aside>
+        <h1 class="text-title-1">Shirts</h1>
+        <aside>
+            <div class="filter-item">
+                <div class="filter-category">
+                    <div class="item-header">
+                        <span class="material-icons">category</span>
+                        <h2 class="text-title-2">Category</h2>
+                        <span class="material-icons">remove_circle_outline</span>
+                    </div>
+                    <ul>
+                        <li>
+                            <input type="checkbox">
+                            <label for="T-Shirts">T-Shirts</label>
+                        </li>
+                        <li>
+                            <input type="checkbox">
+                            <label for="Hoodies">Hoodies</label>
+                        </li>
+                        <li>
+                            <input type="checkbox">
+                            <label for="Tanktop">Tanktop</label>
+                        </li>
+                        <li>
+                            <input type="checkbox">
+                            <label for="Dresses">Dresses</label>
+                        </li>
+                    </ul>
+                </div>
+                <div class="filter-category">
+                    <div class="item-header">
+                        <span class="material-icons">color_lens</span>
+                        <h2 class="text-title-2">Colors</h2>
+                        <span class="material-icons">add_circle_outline</span>
+                    </div>
+                </div>
+                <div class="filter-category">
+                    <div class="item-header">
+                        <span class="material-icons">attach_money</span>
+                        <h2 class="text-title-2">Price</h2>
+                        <span class="material-icons">add_circle_outline</span>
+                    </div>
+                </div>
+            </div>
+        </aside>
         <section class="products-wrapper">
             <div class="filters-desk">
                 <ul>
@@ -48,9 +92,81 @@
                 <span class="material-icons">list</span>
             </div>
             <div class="product-list">
-
+                <div class="product">
+                    <img src="images/shirts/panda-yellow.jpg" alt="camisa amarilla con panda">
+                    <div class="information">
+                        <h2 class="text-title-2">No way Jose</h2>
+                        <p class="text-base">Summer Collection</p>
+                        <p class="colors text-detail">18 colors</p>
+                    </div>
+                    <div class="price">
+                        <span class="discount text-detail">$38</span>
+                        <span class="text-title-2">$25</span>
+                    </div>
+                </div>
+                <div class="product">
+                    <img src="images/shirts/panda-black.jpg" alt="sudadera negra con panda">
+                    <div class="information">
+                        <h2 class="text-title-2">Mad Panda</h2>
+                        <p class="text-base">Summer Collection</p>
+                        <p class="colors text-detail">5 colors</p>
+                    </div>
+                    <div class="price">
+                        <span class="discount text-detail">$50</span>
+                        <span class="text-title-2">$32</span>
+                    </div>
+                </div>
+                <div class="product">
+                    <img src="images/shirts/panda-green.jpg" alt="camisa sin mangas verde">
+                    <div class="information">
+                        <h2 class="text-title-2">Do not disturb</h2>
+                        <p class="text-base">Summer Collection</p>
+                        <p class="colors text-detail">18 colors</p>
+                    </div>
+                    <div class="price">
+                        <span class="discount text-detail">$29</span>
+                        <span class="text-title-2">$24</span>
+                    </div>
+                </div>
+                <div class="product">
+                    <img src="images/shirts/panda-white.jpg" alt="camisa blanca">
+                    <div class="information">
+                        <h2 class="text-title-2">Sane Panda</h2>
+                        <p class="text-base">Summer Collection</p>
+                        <p class="colors text-detail">18 colors</p>
+                    </div>
+                    <div class="price">
+                        <span class="discount text-detail">$38</span>
+                        <span class="text-title-2">$25</span>
+                    </div>
+                </div>
+                <div class="product">
+                    <img src="images/shirts/panda-purple.jpg" alt="camisa morada">
+                    <div class="information">
+                        <h2 class="text-title-2">China panda</h2>
+                        <p class="text-base">Summer Collection</p>
+                        <p class="colors text-detail">10 colors</p>
+                    </div>
+                    <div class="price">
+                        <span class="discount text-detail">$38</span>
+                        <span class="text-title-2">$25</span>
+                    </div>
+                </div>
+                <div class="product">
+                    <img src="images/shirts/panda-gray.jpg" alt="camisa gris">
+                    <div class="information">
+                        <h2 class="text-title-2">Panda Rorschach</h2>
+                        <p class="text-base">Summer Collection</p>
+                        <p class="colors text-detail">16 colors</p>
+                    </div>
+                    <div class="price">
+                        <span class="discount text-detail">$38</span>
+                        <span class="text-title-2">$23</span>
+                    </div>
+                </div>
             </div>
-    </section>
+        </section>
     </main>
 </body>
+
 </html>

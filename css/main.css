@@ -1,12 +1,12 @@
 body {
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Roboto', sans-serif;    
     font-size: 16px;
     margin: 0;
     padding: 0;
     background-color: rgb(247, 241, 241);
 }
 
-/* Utils */
+/* UTILS */
 .container {
     max-width: 1200px;
     margin: 0 auto;
@@ -15,6 +15,33 @@ body {
     .container {
         padding: 0 1rem;
     }
+}
+
+/* TYPOGRAFY */
+.text-title-1 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin: .5rem 0;
+}
+.text-title-2 {
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin: .5rem 0;
+}
+.text-action {
+    font-size: .75rem;
+    font-weight: regular;
+    margin: .5rem 0;
+}
+.text-base {
+    font-size: .875rem;
+    font-weight: regular;
+    margin: .5rem 0;
+}
+.text-detail {
+    font-size: .75rem;
+    font-weight: regular;
+    margin: .5rem 0;
 }
 
 /* HEADER */
@@ -41,7 +68,6 @@ header .container {
 .filters-desk {
     display: none;
 }
-
 
 @media screen and (min-width: 992px) {
     header {
@@ -88,32 +114,109 @@ header .container {
 }
 
 /* MAIN LAYOUT */
-
 main {
-    background-color: lightcoral;
+    display: grid;
+    grid-gap: 1rem;
+}
+main h1 {
+    padding: 1rem;
+}
+.search-mobile {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 1rem 1rem 1rem 3.5rem;
+    border: none;
+    border-bottom: solid 1px rgb(232,232,232);
+    background-image: url(../images/search_icon_gray.svg);
+    background-repeat: no-repeat;
+    background-position-x: 1rem;
+    background-position-y: center;
+    background-size: 2rem;
 }
 aside {
     display: none;
-    background-color: lightskyblue;
-    min-height: 200px;
     width: 200px;
 }
-.products-wrapper {
-    border: solid 6px rgb(193 190 38);
+.product {
+    display: grid;
+    grid-template-columns: max-content 1fr max-content;
+    grid-gap: 1rem;
+    background-color: white;
+    border-radius: 10px;
+    margin: 0 1rem;
+    padding: .5rem;
+    align-items: center;
 }
-
+.product .information {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-right: solid 1px rgb(232,232,232);
+}
+.product img {
+    width: 100%;
+    max-width: 90px;
+    min-width: 80px;
+    border-radius: inherit;
+}
+ .product-list .product .information p {
+    color: rgb(122,122,122);
+}
+.price {
+    padding-right: .75rem;
+}
+.price span {
+    display: grid;
+    grid-template-rows: 1 / 1;
+    color: rgb(199,51,81);
+    font-weight: bold; 
+}
+.price .discount {
+    color: rgb(122,122,122);
+    text-decoration: line-through;
+    font-size: .75rem;
+}
 .product-list {
-    background-color: rgb(243, 222, 222);
-    min-height: 200px;
+    display: grid;
+    grid-gap: 1rem;
 }
+.filter-item {
+    background-color: white;
+}
+.item-header {
+    display: grid;
+    grid-template-columns: max-content 1fr max-content; 
+    grid-gap: .5rem;
+    align-items: center;
+    padding: 1rem;
+    margin: 0;
+}
+.filter-category .item-header h2 {
+    display: flex;
+    justify-content: left;
+}
+.filter-item ul {
+    color: rgb(122,122,122);
+    padding: 0 3rem; 
+    display: grid;
+    grid-gap: 1rem;
+}
+ 
 @media screen and (min-width: 992px) {
+    .search-mobile {
+        display: none;
+    }
     main {
-        display: grid;
         grid-template-columns: max-content 1fr;
     }
     h1 {
         grid-column: 2 / 3;
     } 
+    main h1 {
+        padding: 0;
+    }
     aside {
         display: block;
     }
@@ -141,5 +244,39 @@ aside {
     .filters-desk li.active, .filters-desk li:hover {
         cursor: pointer;
         border-bottom: solid 2px rgb(231, 60, 231);
+    }
+    .product-list {
+        margin-top: 1rem;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    .product-list .product .information .colors {
+        display: none;
+    }
+    .product {
+        margin: 0;
+        padding: 1rem;
+        grid-template-columns: 1fr max-content;
+    }
+    .product .information {
+        height: initial;
+        display: block;
+        border-right: none;
+    }
+    .product img {
+        grid-column: 1 / 3;
+        max-width: none;
+    }
+    .product .price {
+        text-align: right;
+    }
+    .product-list .information span {
+        grid: flex;
+    }
+    .product-list .product-list .information h2 p {
+        font-size: 1.25rem;
+        margin: 0;
+    }
+    .price {
+        padding-right: 0;
     }
 }
